@@ -3,7 +3,7 @@ kind: ReplicationController
 metadate: 
    name: myjavaapp-rc
 spec: 
-   replica: 5
+   replica: 2
    selector: 
      app: myjavaapp
      version: 2.60.1
