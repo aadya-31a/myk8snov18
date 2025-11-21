@@ -1,0 +1,22 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myjavaapp-deploy
+  labels:
+    app: myjavaapp
+spec:
+  replicas: 3
+  selector:
+     matchlabels:
+        app: myjavaapp
+  template:
+    metadata:
+      labels:
+        app: myjavaapp
+    spec:
+      containers:
+      - name: myjavacontainer
+        image: maha4iac/myjavaapp01june25:2
+        ports:
+        - containerPort: 8080
